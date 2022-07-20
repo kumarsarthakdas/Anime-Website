@@ -1,0 +1,455 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+}
+
+body {
+  background-color: black;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+#logo {
+  margin-right: 0.2rem;
+}
+
+#logo:hover {
+  transition: all 0.2s linear;
+  animation: spin 1.5s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar .navbar-nav .nav-link {
+  margin: 0 1rem;
+  color: white;
+}
+
+.navbar .navbar-nav .nav-curr {
+  color: red;
+  font-size: 1.1rem;
+  transition: all 0.2s linear;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+  color: red;
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+
+.navbar .navbar-nav .dropdown-item:hover {
+  background-color: red;
+  transition: all 0.2s linear;
+}
+
+.bg-screen {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption {
+  border-radius: 2rem;
+  max-width: 100%;
+}
+
+.bg-rounded {
+  border-radius: 0.7rem;
+}
+
+.btn-red {
+  color: white;
+  background-color: red;
+}
+
+.btn-red:hover {
+  color: white;
+}
+
+.carousel .carousel-inner h5 {
+  margin: 4px 0;
+  font-size: 1.5rem;
+}
+
+.carousel-caption a {
+  text-decoration: none;
+  color: white;
+}
+
+.carousel-caption a:hover {
+  color: red;
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+
+.carousel .carousel-inner p {
+  font-size: 0.9rem;
+}
+
+/* .main-container */
+
+.main-container {
+  display: grid;
+  grid-template-columns: 65% 35%;
+}
+
+/* .left-container  */
+
+.left-container {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.summer-2022-anime {
+  margin: 2px;
+  padding: 2px;
+}
+
+.anime-list-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.anime-list-header .left-h3 {
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.anime-list-header .left-h3 a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.anime-list-header .left-h3 a:hover {
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+
+.anime-list-header .view-more {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: red;
+}
+
+.anime-list-header .view-more:hover {
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+
+.main-carousel {
+  margin: 5px;
+  background-color: rgb(0, 0, 0);
+}
+
+.carousel-list-item {
+  margin-right: 5px;
+  width: 150px;
+  height: 210px;
+  background-color: rgb(0, 0, 0);
+}
+
+.carousel-list-item a span {
+  padding: 0 5px;
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(#00000000, #000000);
+  color: white;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+.carousel-list-item a img {
+  margin: 0;
+  padding: 0;
+  width: 150px;
+  height: 210px;
+}
+
+.carousel-list-item a img:hover {
+  transform: scale(0.9);
+  transition-duration: 0s;
+}
+
+/* .right-container */
+
+.right-container {
+  display: grid;
+}
+
+.top-airing,
+.top-upcoming {
+  margin: 2px;
+}
+
+/* .ranking-list-template */
+
+.ranking-list-template {
+  display: grid;
+}
+
+.rank-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.rank-header .right-h3 {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.rank-header .more {
+  text-decoration: none;
+  color: red;
+  margin-right: 1rem;
+}
+
+.rank-header .more:hover {
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+
+.divider {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+.rank-list {
+  margin: 0;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-rows: repeat(5, 20%);
+  list-style: none;
+}
+
+.rank-list .rank-items {
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 5fr 1.5fr;
+}
+
+.rank-list .rank {
+  color: white;
+}
+
+.rank-list .div-info {
+  padding-left: 0.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.rank-list .div-info .right-h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.rank-list .div-info .right-h4 a {
+  text-decoration: none;
+  color: rgba(255, 0, 0, 0.95);
+}
+
+.rank-list .div-info .right-h4 a:hover {
+  text-decoration: underline;
+  transition: all 0.2s linear;
+}
+
+.rank-list .div-info .ep-info,
+.rank-list .div-info .score-info {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+  color: silver;
+}
+
+.rank-list .view-now {
+  width: fit-content;
+  height: fit-content;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  justify-self: right;
+}
+
+/* footer */
+
+.footer-wrapper {
+  margin: 0 auto;
+  padding: 1rem;
+  border-top: 1px solid silver;
+  max-width: 80%;
+}
+
+footer {
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+footer .note-wrapper {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 1rem;
+}
+
+.footer-logo-link {
+  margin: 0 0.5rem;
+}
+
+footer .note-wrapper .footer-note {
+  text-align: center;
+  color: white;
+}
+
+footer .icon-collection {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  margin: 0 1rem;
+}
+
+footer .contact-icons {
+  margin: 0 1rem;
+}
+
+footer .icon-pack {
+  font-size: 1.2rem;
+  color: white;
+}
+
+footer .icon-pack:hover {
+  color: red;
+  transition: all 0.2s ease;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 1921px) {
+  body {
+    max-width: 85vw;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main-container {
+    display: block;
+  }
+  .left-container {
+    margin: auto;
+    max-width: 800px;
+    border: 0;
+  }
+  .right-container {
+    margin: auto;
+    max-width: 800px;
+  }
+  .anime-list-header .left-h3 a {
+    font-size: 1.1rem;
+  }
+  .rank-header .right-h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel .carousel-inner h5 {
+    font-size: 1rem;
+  }
+  .carousel-inner .carousel-item .btn {
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .carousel-caption {
+    border-radius: 1rem;
+    max-width: 100%;
+  }
+  .carousel .carousel-inner h5 {
+    font-size: 0.9rem;
+  }
+  .carousel-inner .carousel-item .btn {
+    transform: scale(0.7);
+  }
+  .carousel-control-prev .bg-screen,
+  .carousel-control-next .bg-screen {
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(0.8);
+  }
+
+  footer .icon-pack {
+    transform: scale(0.8);
+  }
+  footer .contact-icons {
+    margin: 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  footer {
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .carousel-caption {
+    border-radius: 1rem;
+    max-width: 100%;
+  }
+  .carousel .carousel-inner h5 {
+    font-size: 0.7rem;
+  }
+  .carousel-inner .carousel-item .btn {
+    display: none;
+  }
+  .carousel-indicators {
+    display: none;
+  }
+  .carousel-control-prev .bg-screen,
+  .carousel-control-next .bg-screen {
+    background-color: rgba(0, 0, 0, 0);
+    transform: scale(0.5);
+  }
+  .rank-list .div-info .right-h4 {
+    font-size: 0.8rem;
+  }
+  .rank-list .div-info .ep-info,
+  .rank-list .div-info .score-info {
+    font-size: 0.7rem;
+  }
+}
