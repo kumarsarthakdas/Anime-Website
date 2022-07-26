@@ -66,7 +66,7 @@ body {
 
 .navbar .navbar-nav .dropdown-item:hover {
   background-color: red;
-  transition: all 0.2s linear;
+  transition: all 0s linear;
 }
 
 .bg-screen {
@@ -115,7 +115,7 @@ body {
 
 .main-container {
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 70% 30%;
 }
 
 /* .left-container  */
@@ -126,41 +126,43 @@ body {
   border-right: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.summer-2022-anime {
+.summer-2022-anime,
+.new-episode-arrivals,
+.popular-anime-trailers {
   margin: 2px;
   padding: 2px;
 }
 
-.anime-list-header {
+.section-list-header {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
 }
 
-.anime-list-header .left-h3 {
+.section-list-header .left-h3 {
   margin: 0;
   padding: 0.3rem;
 }
 
-.anime-list-header .left-h3 a {
+.section-list-header .left-h3 a {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: bold;
   color: white;
 }
 
-.anime-list-header .left-h3 a:hover {
+.section-list-header .left-h3 a:hover {
   text-decoration: underline;
   transition: all 0.2s linear;
 }
 
-.anime-list-header .view-more {
+.section-list-header .view-more {
   margin-right: 1rem;
   text-decoration: none;
   color: red;
 }
 
-.anime-list-header .view-more:hover {
+.section-list-header .view-more:hover {
   text-decoration: underline;
   transition: all 0.2s linear;
 }
@@ -170,35 +172,95 @@ body {
   background-color: rgb(0, 0, 0);
 }
 
-.carousel-list-item {
+/* .summer-2022-anime */
+
+.carousel-list-item-summer-2022 {
+  margin-right: 5px;
+  width: 180px;
+  height: 252px;
+  background-color: rgb(0, 0, 0);
+}
+
+.carousel-list-item-summer-2022 a span {
+  padding: 0 5px;
+  display: inline-block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(#0000001f, #000000);
+  color: white;
+  font-size: 0.8rem;
+  z-index: 10;
+}
+
+/* original image dimensions: 225px * 315px */
+.carousel-list-item-summer-2022 a img {
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  height: 252px;
+}
+
+.carousel-list-item-summer-2022 a img:hover {
+  transform: scale(0.9);
+  transition-duration: 0.2s;
+}
+
+/* .new-episode-arrivals */
+
+.carousel-list-item-new-episode {
   margin-right: 5px;
   width: 150px;
   height: 210px;
   background-color: rgb(0, 0, 0);
 }
 
-.carousel-list-item a span {
+.carousel-list-item-new-episode a span {
   padding: 0 5px;
   display: inline-block;
   width: 100%;
   position: absolute;
   bottom: 0;
-  background-image: linear-gradient(#00000000, #000000);
+  background-image: linear-gradient(#0000003f, #000000);
   color: white;
   font-size: 0.8rem;
   z-index: 10;
 }
 
-.carousel-list-item a img {
+.carousel-list-item-new-episode a span b {
+  color: white;
+  text-decoration: underline;
+}
+
+/* original image dimensions: 225px * 315px */
+.carousel-list-item-new-episode a img {
   margin: 0;
   padding: 0;
   width: 150px;
   height: 210px;
 }
 
-.carousel-list-item a img:hover {
+.carousel-list-item-new-episode a img:hover {
   transform: scale(0.9);
-  transition-duration: 0s;
+  transition-duration: 0.2s;
+}
+
+/* .popular-anime-trailers */
+
+.carousel-list-item-popular-trailers {
+  margin-right: 5px;
+  width: 304px;
+  height: fit-content;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.carousel-list-item-popular-trailers a {
+  color: white;
+  text-decoration: underline;
 }
 
 /* .right-container */
@@ -295,6 +357,13 @@ body {
   color: silver;
 }
 
+.rank-list .div-info .score-info i {
+  margin: 0 1px;
+  font-size: 0.6rem;
+  vertical-align: text-top;
+  color: gold;
+}
+
 .rank-list .view-now {
   width: fit-content;
   height: fit-content;
@@ -365,6 +434,16 @@ footer .icon-pack:hover {
   }
 }
 
+@media only screen and (max-width: 1320px) {
+  .rank-list .div-info .right-h4 {
+    font-size: 0.9rem;
+  }
+  .rank-list .div-info .ep-info,
+  .rank-list .div-info .score-info {
+    font-size: 0.75rem;
+  }
+}
+
 @media only screen and (max-width: 992px) {
   .main-container {
     display: block;
@@ -378,7 +457,7 @@ footer .icon-pack:hover {
     margin: auto;
     max-width: 800px;
   }
-  .anime-list-header .left-h3 a {
+  .section-list-header .left-h3 a {
     font-size: 1.1rem;
   }
   .rank-header .right-h3 {
